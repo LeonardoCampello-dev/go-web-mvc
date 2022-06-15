@@ -42,19 +42,16 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td>Gato brasino</td>
-                <td>Gente fina</td>
-                <td>R$ 5000,00</td>
-                <td>10</td>
-              </tr>
+              {{range .}}
 
               <tr>
-                <td>Gato gordo</td>
-                <td>Lerdo</td>
-                <td>R$ 2000,00</td>
-                <td>2</td>
+                <td>{{.Name}}</td>
+                <td>{{.Description}}</td>
+                <td>{{.Price}}</td>
+                <td>{{.Quantity}}</td>
               </tr>
+
+              {{end}}
             </tbody>
           </table>
         </div>
