@@ -14,3 +14,7 @@ func Index(writer http.ResponseWriter, request *http.Request) {
 
 	htmlTemplates.ExecuteTemplate(writer, "Index", products)
 }
+
+func CreateNewProduct(writer http.ResponseWriter, request *http.Request) {
+	htmlTemplates.ExecuteTemplate(writer, "CreateNewProduct", nil)
+}
