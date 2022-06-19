@@ -52,7 +52,7 @@
                 <td>{{.Quantity}}</td>
 
                 <td>
-                  <a href="/delete?id={{.Id}}" class="btn btn-danger">Delete</a>
+                  <button onclick="handleDelete('{{.Id}}')" class="btn btn-danger">Delete</button>
                 </td>
               </tr>
 
@@ -67,6 +67,16 @@
       </div>
     </div>
   </body>
+
+  <script>
+    const handleDelete = id => {
+      const canYouDeleteTheProduct = confirm('Are you sure you want to delete this product?')
+
+      if (canYouDeleteTheProduct) {
+        window.location = '/delete?id=' + id
+      }
+    }
+  </script>
 </html>
 
 {{end}}
