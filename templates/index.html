@@ -31,6 +31,10 @@
                 <td>{{.Quantity}}</td>
 
                 <td>
+                  <a href="/edit?id={{.Id}}" class="btn btn-info">Edit</a>
+                </td>
+
+                <td>
                   <button onclick="handleDelete('{{.Id}}')" class="btn btn-danger">Delete</button>
                 </td>
               </tr>
